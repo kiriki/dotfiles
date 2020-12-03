@@ -4,7 +4,7 @@ set nocp
 set number
 " highlight LineNr ctermfg=DarkGrey
 "set hlsearch
-colo desert
+color desert
 
 " Press Space to turn off highlighting and clear any message already displayed.
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
