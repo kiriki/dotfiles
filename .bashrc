@@ -118,7 +118,7 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="/home/kirill/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 
