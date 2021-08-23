@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/kirill/.oh-my-zsh"
+export ZSH="/home/kirillche/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,7 +68,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose tmux )
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose tmux poetry)
 ZSH_DISABLE_COMPFIX=true
 
 source $ZSH/oh-my-zsh.sh
@@ -192,3 +192,5 @@ for key     kcap   seq        mode   widget (
   zle -N key-$key
   bindkey ${terminfo[$kcap]-$seq} key-$key
 }
+
+export PATH="$HOME/.poetry/bin:$PATH"
