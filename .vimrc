@@ -12,6 +12,7 @@ color desert
 " Press F4 to toggle highlighting on/off, and show current value.
 :noremap <F4> :set hlsearch! hlsearch?<CR>
 
+imap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
 " An example for a vimrc file.
 "
@@ -64,3 +65,15 @@ augroup END
 if has('syntax') && has('eval')
   packadd! matchit
 endif
+
+set directory^=$HOME/.vim/tmp//
+
+set nobackup nowritebackup
+
+" Use persistent history.
+if !isdirectory($HOME."/.vim/undo")
+     call mkdir($HOME."/.vim/undo", "", 0700)
+endif
+
+set undodir=$HOME/.vim/undo
+set undofile
