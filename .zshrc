@@ -1,3 +1,4 @@
+# echo '.zshrc'
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -118,10 +119,6 @@ prompt_end() {
     CURRENT_BG=''
 }
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -193,5 +190,5 @@ for key     kcap   seq        mode   widget (
   bindkey ${terminfo[$kcap]-$seq} key-$key
 }
 
-export PATH="$HOME/.poetry/bin:$PATH"
 eval "$(pyenv init -)"
+export PATH="$HOME/.poetry/bin:$PATH"
