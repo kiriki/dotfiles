@@ -194,3 +194,4 @@ for key     kcap   seq        mode   widget (
 }
 
 export PATH="$HOME/.poetry/bin:$PATH"
+eval "$(pyenv init -)"
