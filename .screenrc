@@ -69,8 +69,13 @@ bindkey  "^[^[[A" focus up   # alt + up
 bindkey  "^[^[[B" focus down # alt + down
 
 # for ubuntu term
-bindkey  "^[[1;3D" prev # urxvt: alt + left arrow
-bindkey  "^[[1;3C" next # urxvt: alt + right arrow
+#bindkey  "^[[1;3D" prev # urxvt: alt + left arrow
+#bindkey  "^[[1;3C" next # urxvt: alt + right arrow
+
+# for windows term
+# use `sed -n l` to get key codes
+bindkey  "^[[1;5D" prev # urxvt: alt + left arrow
+bindkey  "^[[1;5C" next # urxvt: alt + right arrow
 
 
 # An example of a "screen scraper" which will launch urlview on the current
@@ -143,10 +148,12 @@ hardstatus string '%{gk}[ %{G}%H %{g}][ %10` ][%{= kw}%-w%{= BW}%n %t%{-}%+w][%=
 
 screen -t root sudo -i
 screen -t mcr sudo mc
-# screen -t mc mc 
-screen -t bash
-screen -t fish fish
+screen -t mc mc
+screen -t bash bash
+screen -t zsh zsh
+#screen -t fish fish
 screen -t htop 7 sudo htop
-screen -t syslog 8 sudo tail -100f /var/log/syslog
-screen -t aplog 9 tail -100f /var/log/apache2/error.log
-select 1
+#screen -t syslog 8 sudo tail -100f /var/log/syslog
+#screen -t aplog 9 tail -100f /var/log/apache2/error.log
+
+select 2
