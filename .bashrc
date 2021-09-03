@@ -117,11 +117,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="/home/kirill/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
+# for pyenv: enable autocompletion and all subcommands.
+eval "$(pyenv init -)"
 
-
+# for nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
