@@ -69,7 +69,17 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose tmux poetry)
+
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  docker
+  docker-compose
+  tmux
+  poetry
+  )
+
 ZSH_DISABLE_COMPFIX=true
 
 source $ZSH/oh-my-zsh.sh
@@ -101,6 +111,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias mc='mc -x'
+alias npp="/mnt/c/Program\ Files/Notepad++/Notepad++.exe"
+alias tg="/mnt/c/Program\ Files/TortoiseGit/bin/TortoiseGitProc.exe"
+
+# show git log in TortoiseGit windows app
+alias tgl="(&>/dev/null tg /command:log &)"
 
 prompt_context() {
     DEFAULT_USER="($whoami)"
@@ -191,4 +206,10 @@ for key     kcap   seq        mode   widget (
 }
 
 eval "$(pyenv init -)"
+
+# poetry
 export PATH="$HOME/.poetry/bin:$PATH"
+
+export SCREENDIR=$HOME/.screen
+
+export PATH="$HOME/.local/bin:$PATH"
