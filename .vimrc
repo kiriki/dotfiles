@@ -12,7 +12,11 @@ color desert
 " Press F4 to toggle highlighting on/off, and show current value.
 :noremap <F4> :set hlsearch! hlsearch?<CR>
 
-imap <F5> <Esc>:w<CR>:!clear;python %<CR>
+imap <F5> <Esc>:w<CR>:!clear;python %<CR>:
+
+"Fast quit and save from normal and insert mode
+map <F10> :q<CR>
+imap <F10> <ESC>:q<CR>
 
 " An example for a vimrc file.
 "
