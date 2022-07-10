@@ -27,14 +27,6 @@ shell_patterns=0
         CMD=%{Enter command}
         $CMD %f
 
-+ ! t t
-@       Do edit current file in vscode
-        code %f
-
-+ ! t t
-@       Do edit current file in Notepad++
-        npp %f
-
 + t t
 @       Do something on the tagged files
         CMD=%{Enter command}
@@ -42,6 +34,14 @@ shell_patterns=0
             $CMD "$i"
         done
 
++ ! t t
+1       Edit current file in vscode
+        code %f
+
++ ! t t
+@       Do edit current file in Notepad++
+        npp %f
+        
 0       Edit a bug report and send it to root
         I=`mktemp "${MC_TMPDIR:-/tmp}/mail.XXXXXX"` || exit 1
         ${EDITOR-vi} "$I"
@@ -64,6 +64,10 @@ shell_patterns=0
         cd .. && \
         tar cf - "$Pwd" | gzip -f9 > "$tar.tar.gz" && \
         echo "../$tar.tar.gz created."
+
+4       Open the current subdirectory in explorer.exe
+        Pwd=`wslpath -w "%d"`
+        explorer.exe $Pwd
 
 = f \.c$ & t r
 + f \.c$ & t r & ! t t
