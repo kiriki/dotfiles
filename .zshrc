@@ -28,7 +28,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -43,7 +43,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -113,6 +113,7 @@ source $ZSH/oh-my-zsh.sh
 alias mc='mc -x'
 alias npp="/mnt/c/Program\ Files/Notepad++/Notepad++.exe"
 alias tg="/mnt/c/Program\ Files/TortoiseGit/bin/TortoiseGitProc.exe"
+alias tgl='tg -command log'
 
 # show git log in TortoiseGit windows app
 alias tgl="(&>/dev/null tg /command:log &)"
@@ -208,7 +209,7 @@ for key     kcap   seq        mode   widget (
 eval "$(pyenv init -)"
 
 # poetry
-export PATH="$HOME/.poetry/bin:$PATH"
+# export PATH="$HOME/.poetry/bin:$PATH"
 
 export SCREENDIR=$HOME/.screen
 
