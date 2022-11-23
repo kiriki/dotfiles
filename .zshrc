@@ -217,7 +217,7 @@ for key     kcap   seq        mode   widget (
 eval "$(pyenv init -)"
 
 # poetry
-# export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 export SCREENDIR=$HOME/.screen
 
