@@ -1,4 +1,11 @@
 # echo '.zshrc'
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -9,7 +16,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+# ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,12 +126,12 @@ alias tgl='tg -command log'
 # show git log in TortoiseGit windows app
 alias tgl="(&>/dev/null tg /command:log &)"
 
-prompt_context() {
-    DEFAULT_USER="($whoami)"
-    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@$HOST"
-    fi
-}
+#prompt_context() {
+#    DEFAULT_USER="($whoami)"
+#    if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#        prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@$HOST"
+#    fi
+#}
 
 prompt_end() {
     if [[ -n $CURRENT_BG ]]; then
@@ -214,3 +222,7 @@ eval "$(pyenv init -)"
 export SCREENDIR=$HOME/.screen
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
