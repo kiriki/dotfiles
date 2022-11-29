@@ -10,4 +10,5 @@
     ln -s ~/dotfiles/.vimrc ~/.vimrc
     ln -s ~/dotfiles/.zprofile ~/.zprofile
     ln -s ~/dotfiles/.profile ~/.profile
+    ln -s ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 ```
