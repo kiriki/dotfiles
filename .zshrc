@@ -131,6 +131,12 @@ alias tg="/mnt/c/Program\ Files/TortoiseGit/bin/TortoiseGitProc.exe"
 # show git log in TortoiseGit windows app
 alias tgl="(&>/dev/null tg /command:log &)"
 
+charm() {
+ OPEN=$1
+ WIN_OPEN=`wslpath -w ${OPEN}`
+ cmd.exe /c pycharm "'"${WIN_OPEN}"'"
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
